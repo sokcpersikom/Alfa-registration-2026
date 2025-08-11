@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Регистрация в лагерь</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Регистрация ребёнка в лагерь</h1>
+
+    <form id="regForm">
+      <fieldset>
+        <legend>Данные ребёнка</legend>
+        <label>Имя и фамилия ребёнка
+          <input name="childName" required placeholder="Иван Иванов">
+        </label>
+        <label>Дата рождения
+          <input name="dob" type="date" required>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Данные родителей / контакты</legend>
+        <label>Имя родителя
+          <input name="parentName" required placeholder="Мария Иванова">
+        </label>
+        <label>Телефон
+          <input name="phone" required placeholder="+7 900 000 00 00">
+        </label>
+        <label>Email
+          <input name="email" type="email" placeholder="parent@example.com">
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Документы</legend>
+        <label>Фото ребёнка (jpg/png)
+          <input type="file" name="photo" accept="image/*">
+        </label>
+        <label>Скан согласия (pdf или image)
+          <input type="file" name="consent" accept=".pdf,image/*">
+        </label>
+      </fieldset>
+
+      <label>Комментарий / особенности здоровья
+        <textarea name="notes" rows="3" placeholder="Аллергии, лекарства..."></textarea>
+      </label>
+
+      <div class="actions">
+        <button type="submit">Отправить заявку</button>
+        <span id="status" aria-live="polite"></span>
+      </div>
+    </form>
+
+    <p class="hint">В тестовом режиме данные видны в консоли Firebase. Перед публикацией проверьте правила доступа.</p>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
 
